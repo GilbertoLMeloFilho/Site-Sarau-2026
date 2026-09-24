@@ -1,0 +1,5 @@
+azul claro: 7486DF
+azul escuro: 3755EA
+cinza escuro: 525252
+cinza claro: 828282
+branco: FFFFFF
