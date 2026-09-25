@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --azul-claro: #7486DF;
+  --azul-escuro: #3755EA;
+  --cinza-escuro: #525252;
+  --cinza-claro: #828282;
+  --branco: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  background: var(--cinza-escuro);
+}
+
+body {
+  max-width: 430px;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: var(--branco);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------- Cabeçalho de página interna ---------- */
+.page-header {
+  position: relative;
+  background: var(--azul-claro);
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  color: var(--branco);
+}
+
+.back-link {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26px;
+  line-height: 1;
+  color: var(--branco);
+}
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+  background: var(--azul-claro);
+  padding: 18px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-radius: 4px 4px 0px 0px ;
+  color: var(--branco);
+}
+
+/* ================= HOME ================= */
+#imgprinc{
+    height: 90vh;
+}
+#cima{
+    box-shadow: 0px 9px 17px 20px #111f1f;;
+}
+#baixo{
+    margin-top: 8vh;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #0c0c10;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 20px 0;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--branco);
+  line-height: 1;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--branco);
+}
+
+.btn-inscricao-wrap {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
+  right: 20px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--azul-claro);
+  color: var(--branco);
+  font-size: 17px;
+  font-weight: 500;
+  padding: 14px 0;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--branco);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px 0;
+  border: 1px solid var(--azul-escuro);
+  border-radius: 8px;
+}
+
+.nav-buttons {
+  padding: 24px 20px 8px;
+}
+
+.nav-buttons .btn {
+  margin-bottom: 16px;
+}
+
+.nav-buttons .btn:last-child {
+  margin-bottom: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--azul-escuro);
+  margin: 40px 0 0;
+}
+
+/* ---------- Sobre ---------- */
+.sobre {
+  padding: 28px 20px 8px;
+}
+
+.sobre h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.sobre p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--branco);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sobre-img {
+  width: 100%;
+  aspect-ratio: 350 / 260;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.sobre-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= FORMULÁRIOS ================= */
+.form-wrap {
+  padding: 24px 20px 30px;
+}
+
+.form-card {
+  background: var(--cinza-claro);
+  border-radius: 6px;
+  padding: 22px 18px 26px;
+  box-shadow: 2px 4px 7px 0px rgb(0 0 0);
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="number"],
+.field textarea,
+.field input[type="file"] {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  background: #adadad;
+  padding: 12px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #2b2b2b;
+}
+
+.field textarea {
+  resize: none;
+  min-height: 110px;
+}
+
+.label-center {
+  text-align: center;
+}
+
+.file-box {
+  min-height: 190px;
+}
+
+.field-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.field-row > .field {
+  flex: 1;
+}
+
+.field-serie {
+  flex: 0 0 42%;
+}
+
+.checkbox-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.checkbox-field label {
+  margin-bottom: 0;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.checkbox-field input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--azul-escuro);
+  border-radius: 4px;
+}
+
+.btn-enviar-wrap {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.btn-enviar {
+  display: inline-block;
+  min-width: 190px;
+  background: var(--azul-escuro);
+  color: var(--branco);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 13px 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 4px 7px 0px rgb(0 0 0);
+}
+
+/* ================= LISTA DE MÚSICAS ================= */
+.musica-list {
+  padding: 28px 20px 20px;
+}
+
+.musica-item {
+  margin-bottom: 22px;
+}
+
+.musica-nome {
+  background: #adadad;
+  color: #1c1c1c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  padding: 12px 16px;
+  border-radius: 3px 3px 0 0;
+}
+
+.musica-artista {
+  background: #6f6f6f;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 4px 16px;
+  border-radius: 0 0 3px 3px;
+}
