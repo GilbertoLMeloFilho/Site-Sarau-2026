@@ -1,5 +1,11 @@
+Paleta de cores{
 azul claro: 7486DF
 azul escuro: 3755EA
 cinza escuro: 525252
 cinza claro: 828282
-branco: FFFFFF
+branco: FFFFFF}
+
+Fontes{
+Titulo Sarau: Lavishly Yours
+titulos paginas: Montserrat
+Formulario, botões e texto: Poppins}
