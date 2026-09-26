@@ -131,8 +131,8 @@ img, svg {
 
 .logo {
   font-family: 'Lavishly Yours', cursive;
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 60px;
+  font-weight: 500;
   color: var(--branco);
   line-height: 1;
 }
@@ -220,6 +220,7 @@ img, svg {
   color: var(--branco);
   margin-bottom: 20px;
   text-align: left;
+  text-indent: 15px;
 }
 
 .sobre-img {
@@ -234,6 +235,19 @@ img, svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* ================= FOOTER ================= */
+.Logo_instagram{
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+.footers{
+  display: flex;
+  justify-content: space-between;
+}
+.inst{
+  display: flex;
 }
 
 /* ================= FORMULÁRIOS ================= */
@@ -300,7 +314,7 @@ img, svg {
   border-radius: 10px;
   padding: 5px;
   background-color: #adadad;
-  color: white;
+  color: #FFFFFF;
   box-shadow: inset 0px -1px 3px 0px rgba(0, 0, 0, 0.603)
 }
 .serie:focus{
@@ -462,6 +476,18 @@ img, svg {
     width: 280px;
     max-width: calc(100% - 40px);
     box-sizing: border-box;
+}
+#container_img_pop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#correto{
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  display: none;
 }
 
 #mensagem {

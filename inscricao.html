@@ -62,7 +62,7 @@
 
       <div class="field">
         <label for="num-participantes">Número de Participantes</label>
-        <input type="number" id="num-participantes" name="num-participantes">
+        <input type="number" id="num-participantes" name="num-participantes" required>
       </div>
 
       <div class="form__group field" style="display: none;" id="caixa_nome_part">
@@ -92,7 +92,9 @@
         <button id="fecharPopup" class="fechar-popup" type="button">
           ✕
         </button>
-
+        <div id="container_img_pop">
+          <img src="aceitar.png" alt="correto" id="correto">
+        </div>
         <div id="loading" class="spinner"></div>
 
         <p id="mensagem">Enviando...</p>
@@ -102,7 +104,15 @@
   </main>
 
   <footer class="site-footer">
-    Sarau 2026
+    <div class="footers">
+      <p>Sarau 2026</p>
+      <a href="https://www.instagram.com/2daoima2026/">
+        <div class="inst">
+          <p>Instagram</p>
+          <img src="instagram.png" alt="Logo_instagram" class="Logo_instagram">
+        </div>
+      </a>
+    </div>
   </footer>
   <script>
     const params = new URLSearchParams(window.location.search);

@@ -10,7 +10,7 @@
 
   <header class="page-header">
     <a class="back-link" href="index.html" aria-label="Voltar">&lt;</a>
-    <h1>Desenho</h1>
+    <h1>Arte</h1>
   </header>
   <div id="galeria">
     <div class="carousel">
@@ -70,11 +70,12 @@
           <option value="">3°Ano</option>
       </select>
 <br>
-        <label for="categoria">categoria:</label>
+        <label for="categoria">categoria:</label required>
       <select class="serie" name="categoria">
           <option value="">Desenho Fisico</option>
           <option value="">Desenho Digital</option>
           <option value="">Escultura</option>
+          <option value="">Fotografia</option>
       </select>
 
       <!-- From Uiverse.io by csemszepp -->
@@ -85,7 +86,7 @@
         <div class="text">
           <span id="nome-arquivo">Click to upload image</span>
         </div>
-        <input id="anexar-arquivo" name="anexar-arquivo" type="file">
+        <input id="anexar-arquivo" name="anexar-arquivo" type="file" required>
       </label>
 
       <div class="btn-enviar-wrap">
@@ -101,7 +102,7 @@
         </button>
 
         <div id="loading" class="spinner"></div>
-
+        <img src="aceitar.png" alt="correto" id="correto">
         <p id="mensagem">Enviando...</p>
 
       </div>
@@ -109,7 +110,15 @@
   </main>
 
   <footer class="site-footer">
-    Sarau 2026
+    <div class="footers">
+      <p>Sarau 2026</p>
+      <a href="https://www.instagram.com/2daoima2026/">
+        <div class="inst">
+          <p>Instagram</p>
+          <img src="instagram.png" alt="Logo_instagram" class="Logo_instagram">
+        </div>
+      </a>
+    </div>
   </footer>
   <script>
     document.addEventListener("DOMContentLoaded", function () {

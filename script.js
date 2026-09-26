@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var mensagem = document.getElementById('mensagem');
   var loading = document.getElementById('loading');
   var fecharPopup = document.getElementById('fecharPopup');
+  const img = document.querySelector("#correto")
 
   // Fecha o popup pelo botão X
   if (fecharPopup) {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!popup || !mensagem || !loading) return;
 
     popup.style.display = 'flex';
+    img.style.display = "none"
     mensagem.textContent = texto;
     loading.style.display = carregando ? 'block' : 'none';
   }
@@ -123,6 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (resultado && resultado.ok) {
           mostrarPopup('Enviado com sucesso!', false);
           definirStatus(statusEl, 'Enviado com sucesso!', 'sucesso');
+          img.style.display = "block"
+          console.log("certo")
           form.reset();
 
         } else {
@@ -130,12 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
           definirStatus(statusEl, 'Não foi possível enviar. Tente novamente.', 'erro');
         }
       })
-      .catch(function () {
-        botao.disabled = false;
-
-        mostrarPopup('Erro de conexão. Tente novamente.', false);
-        definirStatus(statusEl, 'Erro de conexão. Tente novamente.', 'erro');
-      });
   }
 
   function definirStatus(elemento, texto, tipo) {
