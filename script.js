@@ -178,7 +178,7 @@ if (quant && nome_part) {
     moverAleatorio();
 
     // Re-calcula e move a cada 3.5 segundos (mesmo tempo da transition)
-    setInterval(moverAleatorio, 3500);
+    setInterval(moverAleatorio, 30000);
 
     // Ajusta os limites caso a janela seja redimensionada
     window.addEventListener('resize', moverAleatorio);
@@ -192,5 +192,20 @@ if (quant && nome_part) {
     } else {
         nomeArquivo.textContent = "Click to upload image";
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const params = new URLSearchParams(window.location.search);
+    const musicaURL = params.get("musica");
+
+    const campoMusica = document.getElementById("musica");
+
+    console.log("URL:", window.location.href);
+    console.log("Parâmetro musica:", musicaURL);
+
+    if (musicaURL && campoMusica) {
+        campoMusica.value = musicaURL;
+    }
+
 });
-});
+})})

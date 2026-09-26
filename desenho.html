@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Desenho — Sarau Literário</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,7 +12,40 @@
     <a class="back-link" href="index.html" aria-label="Voltar">&lt;</a>
     <h1>Desenho</h1>
   </header>
+  <div id="galeria">
+    <div class="carousel">
 
+        <div class="carousel-track">
+
+            <div class="slide">
+                <img src="apersistenciadamemoriasalvadordali-cke.webp" alt="Imagem 1">
+            </div>
+
+            <div class="slide">
+                <img src="escultura.webp" alt="Imagem 2">
+            </div>
+
+            <div class="slide">
+                <img src="images.jfif" alt="Imagem 3">
+            </div>
+
+        </div>
+
+        <!-- Botões -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+        <!-- Indicadores -->
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+</div>
+  </div>
   <main class="form-wrap">
     <form class="form-card" action="#" method="post" data-sheet="Desenho">
 
@@ -26,16 +59,23 @@
           <input type="tel" id="telefone" name="telefone" class="form__field" placeholder=" " required>
       </div>
 
-      <div class="field-row">
-        <div class="field">
-          <label for="serie">Serie:</label>
-          <input type="text" id="serie" name="serie">
-        </div>
-        <div class="field">
-          <label for="categoria">Categoria:</label>
-          <input type="text" id="categoria" name="categoria">
-        </div>
-      </div>
+        <label for="serie">Série:</label>
+      <select class="serie" name="serie">
+          <option value="">6°Ano</option>
+          <option value="">7°Ano</option>
+          <option value="">8°Ano</option>
+          <option value="">9°Ano</option>
+          <option value="">1°Ano</option>
+          <option value="">2°Ano</option>
+          <option value="">3°Ano</option>
+      </select>
+<br>
+        <label for="categoria">categoria:</label>
+      <select class="serie" name="categoria">
+          <option value="">Desenho Fisico</option>
+          <option value="">Desenho Digital</option>
+          <option value="">Escultura</option>
+      </select>
 
       <!-- From Uiverse.io by csemszepp -->
       <label for="anexar-arquivo" class="custum-file-upload">
@@ -50,10 +90,22 @@
 
       <div class="btn-enviar-wrap">
         <button type="submit" class="btn-enviar">Enviar</button>
-        <p class="form-status"></p>
       </div>
 
     </form>
+    <div id="popup" class="popup">
+      <div class="popup-conteudo">
+
+        <button id="fecharPopup" class="fechar-popup" type="button">
+          ✕
+        </button>
+
+        <div id="loading" class="spinner"></div>
+
+        <p id="mensagem">Enviando...</p>
+
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -86,9 +138,80 @@
         }
 
     });
+    const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".slide");
+
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+
+// MOSTRAR SLIDE
+
+function showSlide(index) {
+
+    currentSlide = index;
+
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Atualizar indicadores
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    dots[currentSlide].classList.add("active");
+}
+
+
+// BOTÃO PRÓXIMO
+
+nextButton.addEventListener("click", () => {
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+// BOTÃO ANTERIOR
+
+prevButton.addEventListener("click", () => {
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+// CLICAR NOS INDICADORES
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+
+    });
+
+});
+
 
 });
 </script>
-  <script src="js/script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

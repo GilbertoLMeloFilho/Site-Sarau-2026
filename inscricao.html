@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Inscrição — Sarau Literário</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,10 +27,17 @@
       </div>
 
       <div class="field-row field-row-serie">
-        <div class="field field-serie">
-          <label for="serie">Serie:</label>
-          <input type="text" id="serie" name="serie">
-        </div>
+      <label for="serie">Série:</label>
+      <select class="serie" name="serie">
+          <option value="">6°Ano</option>
+          <option value="">7°Ano</option>
+          <option value="">8°Ano</option>
+          <option value="">9°Ano</option>
+          <option value="">1°Ano</option>
+          <option value="">2°Ano</option>
+          <option value="">3°Ano</option>
+      </select>
+
         <div class="field checkbox-field">
           <label for="ap-turma">Ap. de Turma:</label>
           <label class="container">
@@ -41,9 +48,17 @@
       </div>
 
       <div class="form__group field">
-          <label for="musica" class="form__label">Música</label>
-          <input type="text" id="musica" name="musica" class="form__field" placeholder=" " required>
-      </div>
+    <label for="musica" class="form__label">Música</label>
+
+    <input
+        type="text"
+        id="musica"
+        name="musica"
+        class="form__field"
+        placeholder=" "
+        required
+    >
+</div>
 
       <div class="field">
         <label for="num-participantes">Número de Participantes</label>
@@ -72,24 +87,37 @@
     </form>
         <!-- Popup de envio -->
     <div id="popup" class="popup">
-  <div class="popup-conteudo">
+      <div class="popup-conteudo">
 
-    <button id="fecharPopup" class="fechar-popup" type="button">
-      ✕
-    </button>
+        <button id="fecharPopup" class="fechar-popup" type="button">
+          ✕
+        </button>
 
-    <div id="loading" class="spinner"></div>
+        <div id="loading" class="spinner"></div>
 
-    <p id="mensagem">Enviando...</p>
+        <p id="mensagem">Enviando...</p>
 
-  </div>
-</div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
     Sarau 2026
   </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const musicaURL = params.get("musica");
 
-  <script src="js/script.js" defer></script>
+    console.log("Música encontrada:", musicaURL);
+
+    const campoMusica = document.getElementById("musica");
+
+    if (campoMusica && musicaURL) {
+        campoMusica.value = musicaURL;
+    }
+</script>
+
+</body>
+  <script src="script.js" defer></script>
 </body>
 </html>
