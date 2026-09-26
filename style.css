@@ -18,6 +18,16 @@ html, body {
   width: 100%;
   background: var(--cinza-escuro);
 }
+.corpo{
+  perspective: 1000px;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+
+  transition: transform 1.5s ease-in-out;
+}
+.corpo.aberta {
+    transform: rotateY(-110deg);
+}
 #quadrado-flutuante {
       width: 100px;
       height: 100px;
@@ -28,8 +38,6 @@ html, body {
       top: 0;
       left: 0;
       z-index: 9999;
-
-      /* Suaviza a movimentação: dura 3.5 segundos em cada percurso */
       transition: transform 30.5s ease-in-out;
       will-change: transform;
     }
@@ -57,6 +65,39 @@ img, svg {
   padding-right: 20px;
 }
 
+/* ---------- Fechadura ---------- */
+#botao_insc_fech{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  bottom: 100px;
+  left: 0px;
+}
+#fechadura{
+  height: 250px;
+  width: 125px;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+#macaneta{
+  height: 190px;
+  width: 330px;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  right: 30px;
+  transform-origin: 300px 80px ;
+  transition: transform 0.5s ease;
+}
+#texto_macaneta{
+  z-index: 3;
+  position: absolute;
+  bottom: 90px;
+  right: 130px;
+  color: black;
+}
 /* ---------- Cabeçalho de página interna ---------- */
 .page-header {
   position: relative;
@@ -144,14 +185,6 @@ img, svg {
   font-size: 14px;
   color: var(--branco);
 }
-
-.btn-inscricao-wrap {
-  position: absolute;
-  bottom: 22px;
-  left: 20px;
-  right: 20px;
-}
-
 .btn {
   display: block;
   width: 100%;
@@ -160,17 +193,6 @@ img, svg {
   border: none;
   cursor: pointer;
 }
-
-.btn-primary {
-  background: var(--azul-claro);
-  color: var(--branco);
-  font-size: 17px;
-  font-weight: 500;
-  padding: 14px 0;
-  border-radius: 10px;
-  margin-bottom: 50px;
-}
-
 .btn-outline {
   background: transparent;
   color: var(--branco);

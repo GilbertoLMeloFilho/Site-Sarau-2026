@@ -6,7 +6,7 @@
   <title>Sarau Literário</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="corpo">
   <header class="hero">
     <div class="hero-inner" aria-hidden="true">
       <img src="alex-shuper-Zj4O7gGT-uw-unsplash.jpg" alt="Palco com holofote e apresentação teatral" id="imgprinc">
@@ -15,8 +15,12 @@
       <p class="logo">Sarau Literário</p>
       <p class="tagline">Sarau o surreal 2026.</p>
     </div>
-    <div class="btn-inscricao-wrap">
-      <a class="btn btn-primary" href="inscricao.html">Inscrição</a>
+    <div id="botao_insc_fech">
+      <img src="Imagem do ChatGPT 26 de set. de 2026, 12_13_01.png" alt="fechadura" id="fechadura">
+      <div  id="macaneta">
+        <img src="Imagem do ChatGPT 26 de set. de 2026, 12_14_56.png" alt="macaneta">
+        <div id="texto_macaneta">Inscrição</div>
+      </div>
     </div>
   </header>
   <div id="cima"></div>
@@ -62,7 +66,7 @@
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+    entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
     } else {
@@ -74,6 +78,19 @@
     document
       .querySelectorAll('.hidden, .hiddenLE, .hiddenRD')
       .forEach((el) => observer.observe(el));
+    
+    
+    const retangulo = document.getElementById("macaneta");
+    const porta = document.querySelector(".corpo");
+    retangulo.addEventListener("click", function() {
+    retangulo.style.transform = "rotate(-30deg)";
+    setTimeout(function() {
+      porta.classList.toggle("aberta");
+    }, 650);
+    setTimeout(function() {
+        window.location.href = "inscricao.html";
+    }, 1000);
+    });
   </script>
   <script src="script.js"></script>
 </body>
