@@ -94,9 +94,11 @@ img, svg {
 #texto_macaneta{
   z-index: 3;
   position: absolute;
-  bottom: 90px;
+  bottom: 73px;
   right: 130px;
-  color: black;
+  color: var(--cinza-escuro);
+  font-size: 35px;
+  font-family: 'Lavishly Yours', cursive;
 }
 /* ---------- Cabeçalho de página interna ---------- */
 .page-header {
@@ -740,3 +742,313 @@ input:hover {
     filter: blur(0);
     transform: translateY(0);
 }
+
+/* ---------------------------------------------------------
+   TABLET / TELAS MÉDIAS (>= 768px)
+   --------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  body {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+  #imgprinc {
+    height: 70vh;
+  }
+
+  #baixo {
+    margin-top: 6vh;
+  }
+
+  .hero-text {
+    top: -50px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 32px 40px 8px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-buttons .btn {
+    flex: 1;
+    margin-bottom: 0;
+    min-width: 160px;
+  }
+
+  .nav-buttons .divider {
+    flex-basis: 100%;
+    margin-top: 32px;
+  }
+
+  .sobre {
+    padding: 40px 60px 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sobre h2 {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .sobre p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .carousel {
+    max-width: 600px;
+    height: 340px;
+  }
+
+  .page-header {
+    padding: 34px 40px 26px;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+  .back-link {
+    left: 30px;
+    font-size: 28px;
+  }
+
+  .form-wrap {
+    padding: 36px 40px 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 30px 34px 34px;
+  }
+
+  .field-row {
+    gap: 24px;
+  }
+
+  .custum-file-upload {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .musica-list {
+    padding: 36px 40px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .musica-item {
+    margin-bottom: 0;
+  }
+
+  .site-footer {
+    padding: 18px 40px;
+  }
+
+  .footers {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------------------------------------------------------
+   DESKTOP (>= 1024px)
+   --------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+
+  .nav-buttons,
+  .sobre,
+  .footers {
+    max-width: 960px;
+  }
+
+  #imgprinc {
+    height: 60vh;
+  }
+
+  .logo {
+    font-size: 78px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  #fechadura {
+    height: 300px;
+    width: 150px;
+  }
+
+  #macaneta {
+    height: 220px;
+    width: 380px;
+    bottom: 120px;
+    right: 40px;
+    transform-origin: 340px 80px
+  }
+
+  #texto_macaneta {
+    font-size: 40px;
+    bottom: 87px;
+    right: 130px;
+  }
+
+  .nav-buttons {
+    padding: 40px 80px 8px;
+    justify-content: space-around;
+  }
+
+  .nav-buttons .btn {
+    max-width: 260px;
+  }
+
+  .sobre {
+    padding: 48px 100px 20px;
+  }
+
+  .sobre p {
+    max-width: 760px;
+  }
+
+  #galeria {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel {
+    max-width: 700px;
+    height: 400px;
+  }
+
+  .form-card {
+    max-width: 640px;
+  }
+
+  .musica-list {
+    max-width: 900px;
+    padding: 44px 80px 36px;
+  }
+
+  .site-footer {
+    padding: 20px 80px;
+  }
+}
+
+/* ---------------------------------------------------------
+   TELAS GRANDES (>= 1440px)
+   --------------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+
+  .nav-buttons,
+  .sobre,
+  .footers {
+    max-width: 100%;
+  }
+  .logo {
+    font-size: 90px;
+  }
+  #sobre_bar{
+    display: flex;
+    justify-content: space-between;
+  }
+  #text_bar{
+    margin-right: 20px;
+    margin-top: 45px;
+  }
+  #text_bar_baixo{
+    justify-content: left;
+  }
+  .tagline {
+    font-size: 18px;
+  }
+
+  #texto_macaneta {
+    bottom:85px;
+    right: 140px;
+    font-size: 40px;
+  }
+
+  /* Cabeçalho interno das páginas um pouco maior em telas muito grandes */
+  .page-header h1 {
+    font-size: 42px;
+  }
+
+  .back-link {
+    font-size: 30px;
+  }
+
+  .nav-buttons .btn {
+    font-size: 18px;
+    padding: 16px 0;
+  }
+
+  .sobre {
+    padding: 56px 140px 24px;
+    margin: 20px;
+
+  .sobre h2 {
+    font-size: 32px;
+  }
+
+  .sobre p {
+    font-size: 20px;
+    margin: 0px;
+  }
+
+  .form-card {
+    max-width: 680px;
+  }
+
+  .field label {
+    font-size: 16px;
+  }
+
+  .field input[type="text"],
+  .field input[type="tel"],
+  .field input[type="number"],
+  .field textarea,
+  .field input[type="file"] {
+    font-size: 16px;
+    padding: 14px 12px;
+  }
+
+  .btn-enviar {
+    font-size: 18px;
+    min-width: 220px;
+    padding: 15px 0;
+  }
+
+  .musica-nome {
+    font-size: 21px;
+  }
+
+  .musica-artista {
+    font-size: 13px;
+  }
+
+  /* Continua em no máximo 2 colunas, apenas com mais espaço */
+  .musica-list {
+    max-width: 980px;
+    padding: 50px 100px 40px;
+  }
+}}
+@media screen and (min-width: 1700px){
+  #imgprinc{
+    height: 100%;
+  }

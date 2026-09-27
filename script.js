@@ -155,8 +155,8 @@ if (quant && nome_part) {
             nome_part.style.display = 'none';
         }
     });
-}
-
+  }
+});
     const quadrado = document.querySelector('#quadrado-flutuante');
 
     function moverAleatorio() {
@@ -204,8 +204,5 @@ if (quant && nome_part) {
     if (musicaURL && campoMusica) {
         campoMusica.value = musicaURL;
     }
-
-    
-
-});
+   
 })})

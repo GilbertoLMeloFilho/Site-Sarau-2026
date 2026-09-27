@@ -9,17 +9,17 @@
 <body class="corpo">
   <header class="hero">
     <div class="hero-inner" aria-hidden="true">
-      <img src="alex-shuper-Zj4O7gGT-uw-unsplash.jpg" alt="Palco com holofote e apresentação teatral" id="imgprinc">
+      <img src="Imagem do ChatGPT 26 de set. de 2026, 17_32_29.png" alt="Palco com holofote e apresentação teatral" id="imgprinc">
     </div>
     <div class="hero-text">
       <p class="logo">Sarau Literário</p>
-      <p class="tagline">Sarau o surreal 2026.</p>
+      <p class="tagline">Sarau, o Surreal.</p>
     </div>
     <div id="botao_insc_fech">
       <img src="Imagem do ChatGPT 26 de set. de 2026, 12_13_01.png" alt="fechadura" id="fechadura">
       <div  id="macaneta">
         <img src="Imagem do ChatGPT 26 de set. de 2026, 12_14_56.png" alt="macaneta">
-        <div id="texto_macaneta">Inscrição</div>
+        <div id="texto_macaneta">Entre</div>
       </div>
     </div>
   </header>
@@ -33,18 +33,43 @@
     
       <section class="sobre">
         <h2>Sobre</h2>
-        <p class="hidden">
-          No início do século XX, na Europa, nascem as Vanguardas Europeias - movimentos artísticos que buscavam novas possibilidades de interpretar a realidade.  Entre tais movimentos, surge o Surrealismo, criado por André Breton, no ano de 1924. O artista, dissidente do Dadaísmo, em seu Manifesto Surrealista propôs o “automatismo psíquico puro”, no qual o pensamento se manifesta livremente, sem as amarras da razão, da lógica ou da moral.</p>
-          <p class="hidden">Inspirado pela psicanálise de Sigmund Freud - de quem Breton era grande admirador - o Surrealismo mergulha nas profundezas do inconsciente, lugar em que sonhos, fantasias e desejos ocultos se entrelaçam, criando uma realidade paralela, tão irreal quanto enigmática. Nela, o impossível ganha forma, o absurdo se torna belo e a imaginação rompe as fronteiras do mundo desperto.
-        </p>
-    
-        <div class="sobre-img hidden" aria-hidden="true">
-          <img src="apersistenciadamemoriasalvadordali-cke.webp">
+        <div id="sobre_bar">
+          <div id="text_bar">
+            <p class="hidden">
+              No início do século XX, na Europa, nascem as Vanguardas Europeias - movimentos artísticos que buscavam novas possibilidades de interpretar a realidade.  Entre tais movimentos, surge o Surrealismo, criado por André Breton, no ano de 1924. O artista, dissidente do Dadaísmo, em seu Manifesto Surrealista propôs o “automatismo psíquico puro”, no qual o pensamento se manifesta livremente, sem as amarras da razão, da lógica ou da moral.</p>
+              <p class="hidden">Inspirado pela psicanálise de Sigmund Freud - de quem Breton era grande admirador - o Surrealismo mergulha nas profundezas do inconsciente, lugar em que sonhos, fantasias e desejos ocultos se entrelaçam, criando uma realidade paralela, tão irreal quanto enigmática. Nela, o impossível ganha forma, o absurdo se torna belo e a imaginação rompe as fronteiras do mundo desperto.
+            </p>
+          </div>
+          <div id="galeria" class="hidden">
+          <div class="carousel">
+          <div class="carousel-track">
+              <div class="slide">
+                  <img src="apersistenciadamemoriasalvadordali-cke.webp" alt="Imagem 1">
+              </div>
+              <div class="slide">
+                  <img src="escultura.webp" alt="Imagem 2">
+              </div>
+              <div class="slide">
+                  <img src="images.jfif" alt="Imagem 3">
+              </div>
+          </div>
+          <!-- Botões -->
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+          <!-- Indicadores -->
+          <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+          </div>
+              </div>
+          </div>
         </div>
-    
-          <p class="hidden">Para adentrar o mundo onírico, os artistas que se apresentarão são convidados a se caracterizarem (maquiagem, roupas, fantasias, entre outros), transformando a própria aparência em parte desse universo de sonhos, mistérios e delirios como criaturas de um mundo no qual a lógica adormece e a fantasia desperta. Sejam os artistas suas próprias artes-vivas!</p>
-          <p class="hidden">Então, prepare-se, sonhe, imagine, delire e venha com a Segunda Série mergulhar nesse universo de loucura e voar nesse mar de sonhos do Sarau, o Surreal.</p>
-          <p class="hidden"><strong>No dia 12 de novembro de 2026.</strong></p>
+          <div id="text_bar_baixo">
+            <p class="hidden">Para adentrar o mundo onírico, os artistas que se apresentarão são convidados a se caracterizarem (maquiagem, roupas, fantasias, entre outros), transformando a própria aparência em parte desse universo de sonhos, mistérios e delirios como criaturas de um mundo no qual a lógica adormece e a fantasia desperta. Sejam os artistas suas próprias artes-vivas!</p>
+            <p class="hidden">Então, prepare-se, sonhe, imagine, delire e venha com a Segunda Série mergulhar nesse universo de loucura e voar nesse mar de sonhos do Sarau, o Surreal.</p>
+            <p class="hidden"><strong>No dia 12 de novembro de 2026.</strong></p>
+          </div>
       </section>
   </div>
 
@@ -91,6 +116,76 @@
         window.location.href = "inscricao.html";
     }, 1000);
     });
+  const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".slide");
+
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+
+// MOSTRAR SLIDE
+
+function showSlide(index) {
+
+    currentSlide = index;
+
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Atualizar indicadores
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    dots[currentSlide].classList.add("active");
+}
+
+
+// BOTÃO PRÓXIMO
+
+nextButton.addEventListener("click", () => {
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+// BOTÃO ANTERIOR
+
+prevButton.addEventListener("click", () => {
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+// CLICAR NOS INDICADORES
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+
+    });
+
+});
   </script>
   <script src="script.js"></script>
 </body>
