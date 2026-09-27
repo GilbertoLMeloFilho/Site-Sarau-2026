@@ -91,15 +91,6 @@ img, svg {
   transform-origin: 300px 80px ;
   transition: transform 0.5s ease;
 }
-#texto_macaneta{
-  z-index: 3;
-  position: absolute;
-  bottom: 73px;
-  right: 130px;
-  color: var(--cinza-escuro);
-  font-size: 35px;
-  font-family: 'Lavishly Yours', cursive;
-}
 /* ---------- Cabeçalho de página interna ---------- */
 .page-header {
   position: relative;
