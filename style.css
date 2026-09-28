@@ -167,7 +167,7 @@ img, svg {
   font-family: 'Lavishly Yours', cursive;
   font-size: 60px;
   font-weight: 500;
-  color: var(--branco);
+  color: #e8c765;
   line-height: 1;
 }
 
@@ -176,7 +176,7 @@ img, svg {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 14px;
-  color: var(--branco);
+  color: #e8c765;
 }
 .btn {
   display: block;
@@ -1042,4 +1042,4 @@ input:hover {
 @media screen and (min-width: 1700px){
   #imgprinc{
     height: 100%;
-  }
+  }}
